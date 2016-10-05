@@ -75,6 +75,7 @@ public class CommandCenter {
 
     @VisibleForTesting
     void initializeAndNavigateRover(NavigationService navigationService) {
+        LOGGER.info("Please enter two positive numbers separated by a space followed by a letter to specify orientation [N,S,E,W]");
         final String line = lineScanner.fetchUserInput();
         Matcher matcherXY = roverCoordinatesPattern.matcher(line);
         if(matcherXY.matches()) {
@@ -99,6 +100,7 @@ public class CommandCenter {
 
     @VisibleForTesting
     void navigateRover(Rover rover, NavigationService navigationService) {
+        LOGGER.info("Please enter rover exploration instruction of the form MMRLMLM without spaces");
         final String cmd = lineScanner.fetchUserInput();
         Matcher matcherM = roverMovementCommandPattern.matcher(cmd);
         if(matcherM.matches())  {
