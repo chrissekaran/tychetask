@@ -17,8 +17,7 @@ public class NasaControl {
     private static final Logger LOGGER = LoggerFactory.getLogger(NasaControl.class);
 
     public static void main(String[] args) {
-
-        LOGGER.info("Welcome to Nasa Control centre where we control the Mars rovers! \n\nPlease start by entering upper right coordinates of plateau.");
+    	LOGGER.info("Welcome to Nasa Control centre where we control the Mars rovers! \n\nPlease start by entering upper right coordinates of plateau.");
         CommandCenter.commandSession().start();
     }
 
